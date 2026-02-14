@@ -1,3 +1,6 @@
+# Parte 0 — Ejercicio 0.5: diagrama de aplicación de una sola página
+
+```mermaid
 sequenceDiagram
     participant navegador
     participant servidor
@@ -28,7 +31,7 @@ sequenceDiagram
 
     Note right of navegador: Al enviar el formulario, JS usa e.preventDefault()<br/>para evitar recargar la página
 
-    navegador->>servidor: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa<br/>(Content-Type: application/json)<br/>{ content: "...", date: "..." }
+    navegador->>servidor: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa<br/>(Content-Type: application/json)<br/>{ "content": "...", "date": "..." }
     activate servidor
     servidor-->>navegador: 201 Created
     deactivate servidor
